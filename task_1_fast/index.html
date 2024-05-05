@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div id="square"></div>
+      </div>
+      <div class="square_buttons">
+        <button id="square_CSS">CSS</button>
+        <button id="square_JS">JS</button>
+        <button id="square_CSS+JS">CSS+JS</button>
+      </div>
+    </section>
+
+    <hr />
+    <section>
+      <div class="container">
+        <div id="square_2"></div>
+      </div>
+      <button id="toggle_CSS+JS">toggle</button>
+    </section>
+
+    <hr />
+    <section>
+      <div class="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <button id="toggle_all">toggle all</button>
+    </section>
+
+    <hr />
+    <section>
+      <input id="input_selector" type="text" />
+      <button id="remove_element_by_selector">
+        remove element by selector
+      </button>
+    </section>
+
+    <hr />
+    <section>
+      <div class="container">
+        <div id="square_yellow"></div>
+      </div>
+    </section>
+
+    <hr />
+    <section>
+      <div class="container" style="height: 60px">
+        <div id="square_red" class="square"></div>
+      </div>
+      <button id="square_red_hover">hover</button>
+    </section>
+
+    <hr />
+    <section>
+      <div class="container" style="height: 25px">
+        <div id="square_green" class="square"></div>
+      </div>
+      <input id="square_green_focus" placeholder="focus" />
+    </section>
+
+    <hr />
+    <section>
+      <div class="container" style="height: 100px; width: 100px">
+        <img
+          style="height: 100%; width: 100%; object-fit: cover"
+          id="img_by_link"
+          src=""
+          alt=""
+        />
+      </div>
+      <input id="img_by_link_input" type="text" />
+      <button id="img_by_link_button">get image</button>
+    </section>
+
+    <hr />
+    <section>
+      <div
+        id="imgs_by_link"
+        class="container"
+        style="height: 100px; width: 100px"
+      ></div>
+      <textarea id="imgs_by_link_textarea" type="text"></textarea>
+      <button id="imgs_by_link_button">get image</button>
+    </section>
+
+    <hr />
+    <section>
+      <div
+        id="coord_block"
+        style="
+          display: flex;
+          height: 30px;
+          width: auto;
+          position: fixed;
+          top: 0;
+          right: 0;
+        "
+      >
+        <div class="mouse_coords"></div>
+        <div class="lang_coords"></div>
+        <div class="position_coords"></div>
+      </div>
+    </section>
+
+    <hr />
+    <section>
+      <div class="container">
+        <div
+          id="edit_block_local"
+          style="border: 1px solid black; padding: 5px"
+          contenteditable="true"
+        >
+          Текст, який можна редагувати (localStorage)
+        </div>
+        <div
+          id="edit_block_cookies"
+          style="border: 1px solid black; padding: 5px"
+          contenteditable="true"
+        >
+          Текст, який можна редагувати (cookies)
+        </div>
+        <div
+          id="edit_block_session"
+          style="border: 1px solid black; padding: 5px"
+          contenteditable="true"
+        >
+          Текст, який можна редагувати (sessionStorage)
+        </div>
+      </div>
+    </section>
+
+    <hr />
+    <section>
+      <button id="up-button">UP</button>
+    </section>
+
+    <hr />
+    <section>
+      <div id="alert_big">
+        <div id="alert_small"></div>
+      </div>
+    </section>
+
+    <hr />
+    <section>
+      <div id="blocker_element" class="hidden"></div>
+      <button id="blocker_button">block screen</button>
+    </section>
+
+    <hr />
+    <section>
+      <form id="myForm">
+        <input type="submit" value="GO" />
+      </form>
+    </section>
+
+    <hr />
+    <section>
+      <div id="file-drop-area">
+        <input
+          type="file"
+          id="fileInput"
+          class="file-input"
+          accept=".jpg, .jpeg, .png"
+        />
+        <label for="fileInput" id="fileInput_label" class="file-label"
+          >Перетягніть файл сюди або натисніть для вибору</label
+        >
+        <div id="selectedFile"></div>
+      </div>
+    </section>
+    
+    <hr />
+    <script src="./skript.js"></script>
+  </body>
+</html>

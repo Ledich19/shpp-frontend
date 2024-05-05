@@ -1,0 +1,104 @@
+section {
+  margin-top: 10px;
+}
+.container {
+  display: flex;
+  gap: 5px;
+  height: 105px;
+}
+
+.hidden {
+  display: none;
+  overflow: hidden;
+}
+
+.square,
+#square,
+#square_2 {
+  height: 100px;
+  width: 100px;
+  background: #000;
+  margin-bottom: 10px;
+}
+
+#square_yellow {
+  background: #e5e907;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+}
+#square_red {
+  height: 50px;
+  width: 50px;
+  background: red;
+  cursor: pointer;
+  display: none;
+}
+#square_green {
+  height: 20px;
+  width: 50px;
+  background: green;
+  cursor: pointer;
+  display: none;
+}
+
+#up-button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transform: translate(-100%, -100%);
+  font-size: 18px;
+  display: none;
+}
+
+#alert_big {
+  height: 150px;
+  width: 150px;
+  background: red;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#alert_small {
+  height: 50px;
+  width: 50px;
+  background: green;
+  cursor: pointer;
+}
+
+#blocker_element {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #00000075;
+  height: 100vh;
+  width: 100vw;
+}
+#blocker_button {
+}
+
+#file-drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  font-size: 16px;
+}
+
+#selectedFile {
+  margin-top: 10px;
+}
+
+.dragover {
+  border: 2px dashed #000000;
+  border-radius: 10px;
+}
