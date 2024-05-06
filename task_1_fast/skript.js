@@ -103,9 +103,6 @@ imgsByLinkButton.addEventListener("click", () => {
 const coordBlock = document.getElementById("coord_block");
 const mouseCoordsDiv = document.querySelector("#coord_block .mouse_coords");
 const langCoordsDiv = document.querySelector("#coord_block .lang_coords");
-const positionCoordsDiv = document.querySelector(
-  "#coord_block .position_coords"
-);
 
 document.addEventListener("mousemove", async (e) => {
   const mouseX = e.clientX;
@@ -115,6 +112,9 @@ document.addEventListener("mousemove", async (e) => {
 });
 
 //::: 12
+const positionCoordsDiv = document.querySelector(
+  "#coord_block .position_coords"
+);
 
 navigator.geolocation.getCurrentPosition((position) => {
   latitude = position.coords.latitude;
@@ -168,14 +168,15 @@ const upButton = document.getElementById("up-button");
 upButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
 document.addEventListener("scroll", (e) => {
-  e.preventDefault
+  e.preventDefault;
   if (
-    document.documentElement.clientHeight/2 < document.documentElement.scrollTop
+    document.documentElement.clientHeight / 2 <
+    document.documentElement.scrollTop
   ) {
     upButton.style.display = "block";
   } else {
@@ -224,25 +225,29 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
 
 const fileInput = document.getElementById("fileInput");
 const selectedFile = document.getElementById("selectedFile");
-const fileDropArea = document.getElementById("file-drop-area");
+const fileDropArea = document.querySelector(".file-drop-area");
 
-fileInput.addEventListener("change", () => {
-  const file = this.files[0];
+const showFilename = (file) => {
   selectedFile.textContent = file ? `Вибраний файл: ${file.name}` : "";
+};
+
+fileInput.addEventListener("change", function () {
+  const file = this.files[0];
+  showFilename(file);
 });
 
 fileDropArea.addEventListener("dragover", (e) => {
   e.preventDefault();
-  fileDropArea.parentNode.classList.add("dragover");
+  fileDropArea.classList.add("dragover");
 });
 
 fileDropArea.addEventListener("dragleave", () => {
-  fileDropArea.parentNode.classList.remove("dragover");
+  fileDropArea.classList.remove("dragover");
 });
 
 fileDropArea.addEventListener("drop", (e) => {
   e.preventDefault();
-  fileDropArea.parentNode.classList.remove("dragover");
+  fileDropArea.classList.remove("dragover");
   const file = e.dataTransfer.files[0];
-  selectedFile.textContent = file ? `Вибраний файл: ${file.name}` : "";
+  showFilename(file);
 });
